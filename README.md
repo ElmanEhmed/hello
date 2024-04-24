@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 CREATE TABLE Users (
     UserID INT PRIMARY KEY IDENTITY,
     Username NVARCHAR(50) UNIQUE,
@@ -82,3 +93,30 @@ public bool SignIn(string username, string password)
 
     return false;
 }
+
+
+
+
+
+
+CREATE TABLE Roles (
+    RoleID INT PRIMARY KEY,
+    RoleName NVARCHAR(50)
+);
+
+
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY,
+    Username NVARCHAR(50) UNIQUE,
+    Email NVARCHAR(100) UNIQUE,
+    PasswordHash VARBINARY(64),
+    RoleID INT,
+    CONSTRAINT FK_Users_Roles FOREIGN KEY (RoleID) REFERENCES Roles (RoleID)
+);
+
+INSERT INTO Roles (RoleID, RoleName) VALUES (1, 'Admin');
+INSERT INTO Roles (RoleID, RoleName) VALUES (2, 'User');
+
+
+INSERT INTO Users (Username, Email, PasswordHash, RoleID) 
+VALUES ('johndoe', 'johndoe@example.com', 0x0123456789ABCDEF, 2);
