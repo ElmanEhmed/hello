@@ -67,3 +67,10 @@ PL/SQL kullanarak kapsamlı bir banka projesi oluşturmak, çeşitli bileşenler
 
 ### Sonuç
 Bu liste, PL/SQL kullanılarak bir banka projesi oluşturmak için gerekli bileşenleri kapsar. Her bir bileşen, bankacılık operasyonlarının belirli bir yönünü desteklemek için tasarlanmıştır. Proje geliştirme sürecinde, işlevselliği, performansı ve güvenliği sağlamak için bu bileşenleri dikkatlice uygulamak ve test etmek önemlidir.
+
+
+ALTER TABLE Orders
+ADD CONSTRAINT fk_customer
+FOREIGN KEY (customer_id)
+REFERENCES Customers(customer_id)
+ON DELETE CASCADE; -- Referans alınan müşteri silinirse, ilişkili siparişler de silinir.
