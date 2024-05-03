@@ -1,3 +1,7 @@
+
+
+https://docs.google.com/spreadsheets/d/1Mx7KtB5hVFKSQ-ONpMvmIbGAOhMMYUvJr_ehO9bmYiA/edit?usp=drivesdk
+
 PL/SQL kullanarak kapsamlı bir banka projesi oluşturmak, çeşitli bileşenlerin dikkatle planlanmasını ve uygulanmasını gerektirir. Aşağıda, bir banka projesinde bulunması gereken temel PL/SQL bileşenlerinin bir listesi verilmiştir. Her bir bileşen, bankacılık operasyonlarının belirli bir yönünü kapsar.
 
 ### Tablolar (Tables)
