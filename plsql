@@ -2,6 +2,61 @@
 
 https://docs.google.com/spreadsheets/d/1Mx7KtB5hVFKSQ-ONpMvmIbGAOhMMYUvJr_ehO9bmYiA/edit?usp=drivesdk
 
+
+
+Bank sistemi müxtəlif funksiyaları və prosesləri dəstəkləmək üçün bir çox cədvəldən istifadə edir. PL/SQL ilə SQL verilənlər bazasında qurula biləcək cədvəllərin bir hissəsini aşağıda sadalamışam. Bu cədvəllər bankçılığın müxtəlif aspektlərini əhatə edir və məlumatların effektiv idarə olunmasını təmin edir:
+
+### Müştərilərə Aid Cədvəllər
+1. **Müştəri**:
+   - Müştəri ID, Ad, Soyad, Doğum Tarixi, Ünvan, Əlaqə Nömrəsi və s.
+
+2. **Müştəri Hesabları**:
+   - Hesab ID, Müştəri ID, Hesab Tipi (Saxlama, Yığım, Çəkiliş və s.), Balans və s.
+
+### Hesab və Maliyyə Cədvəlləri
+3. **Əməliyyatlar**:
+   - Əməliyyat ID, Hesab ID, Əməliyyat Tipi (Yatırma, Çəkiliş, Transfer), Məbləğ, Tarix və s.
+
+4. **Kreditlər**:
+   - Kredit ID, Müştəri ID, Kredit Məbləği, Kredit Faizi, Başlama Tarixi, Ödəniş Planı və s.
+
+5. **Depozitlər**:
+   - Depozit ID, Müştəri ID, Depozit Tipi, Məbləğ, Faiz, Başlama Tarixi və s.
+
+### Kartlara Aid Cədvəllər
+6. **Kredit Kartları**:
+   - Kart ID, Müştəri ID, Kart Nömrəsi, Kredit Limit, Balans, Son İstifadə Tarixi və s.
+
+7. **Debet Kartları**:
+   - Kart ID, Müştəri ID, Kart Nömrəsi, Balans, Son İstifadə Tarixi və s.
+
+### Kadr və İşçilər Cədvəlləri
+8. **İşçilər**:
+   - İşçi ID, Ad, Vəzifə, Əmək Haqqı, İcazə Günü, Şöbə və s.
+
+9. **Şöbələr**:
+   - Şöbə ID, Ad, Məkan və s.
+
+### Digər Cədvəllər
+10. **Avtomatlaşdırılmış Pul Köçürmələri (ATM)**:
+    - ATM ID, Məkan, Xidmət Etdiyi Hesablar, Nəğd Pul Miqdarı və s.
+
+11. **Borc Cədvəli**:
+    - Borc ID, Müştəri ID, Borcun Növü, Məbləğ, Son Ödəniş Tarixi və s.
+
+12. **Risk İdarəçiliyi**:
+    - Risk ID, Risk Növü, Riskin Təhlili, Tədbirlər və s.
+
+### Cədvəl Əlaqələri və İndekslər
+- Müştəri ilə Müştəri Hesabları, Müştəri ilə Kredit Kartları, Hesablarla Əməliyyatlar kimi əlaqələri qurmaq üçün **xarici açarları** və **indeksləri** nəzərə almalısınız.
+
+### Digər Cədvəllər
+Bunlar bank sistemində ümumi cədvəllərdir, lakin hər bir bankın spesifik ehtiyaclarına uyğun fərqli və əlavə cədvəllər də ola bilər. Dəqiq strukturlar layihənin tələblərindən və biznes ehtiyaclarından asılı olaraq dəyişə bilər.
+
+
+
+
+
 PL/SQL kullanarak kapsamlı bir banka projesi oluşturmak, çeşitli bileşenlerin dikkatle planlanmasını ve uygulanmasını gerektirir. Aşağıda, bir banka projesinde bulunması gereken temel PL/SQL bileşenlerinin bir listesi verilmiştir. Her bir bileşen, bankacılık operasyonlarının belirli bir yönünü kapsar.
 
 ### Tablolar (Tables)
